@@ -1,0 +1,18 @@
+{
+  "name": "metiexpress",
+  "version": "1.0.0",
+  "description": "Crean un clon de meetup usando express y react",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./index.js"
+  },
+  "author": "Rey Perseo Cardenas Sanchez",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}
