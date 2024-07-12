@@ -1,0 +1,12 @@
+Dependencias usadas 
+- npm i --save-dev nodemon 
+- npm install --save express dotenv 
+- npm i --save-express-layouts
+"Base de datos"
+- npm i --save sequelize pg 
+- npm install --save mysql2
+"---------------"
+hashear el password
+npm i --save bcrypt-nodejs
+"---------------"
+npm i --save connect-flash cookie-parser express-session
