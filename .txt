@@ -14,4 +14,6 @@ npm i --save connect-flash cookie-parser express-session
 npm i --save express-validator ojo: utilizar esta version | 
 npm i express-validator@5.3.1
 "---------------"
-
+Envío de email
+npm i --save nodemailer
+"---------------"
