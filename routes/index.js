@@ -1,8 +1,10 @@
 const express = require('express')
 const router = express.Router()
 
-const homeController = require('../controllers/homeController')
-const userController = require('../controllers/userController')
+const homeController = require('../controllers/homeController');
+const userController = require('../controllers/userController');
+const authController = require('../controllers/authController');
+
 module.exports = function(){
     /* Se define el nombre de la ruta localhost5000:inicio localhost:5000/crear-cuenta */
     router.get('/', homeController.home);
@@ -13,7 +15,8 @@ module.exports = function(){
     router.get('/confirmar-cuenta/:correo', userController.confirmarCuenta);
 
     // Iniciar Sesión 
-    router.get('/iniciar-sesion', userController.formLogin)
+    router.get('/iniciar-sesion', userController.formLogin);
+    router.post('/iniciar-sesion', authController.auntenticarUsuario);
     
     return router
 }
