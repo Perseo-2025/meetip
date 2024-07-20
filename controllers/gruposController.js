@@ -86,3 +86,40 @@ exports.crearGrupo = async (req, res) => {
         res.redirect('/nuevo-grupo');
     }
 }
+//Editar
+exports.formEditarGrupo = async (req, res, next) => {
+    const consultas = [];
+    consultas.push(Grupos.findByPk(req.params.id));
+    consultas.push(Categorias.findAll());
+
+    // Promise
+    const [grupo, categorias] = await Promise.all(consultas);
+
+    res.render('editar-grupo',{
+        nombrePagina:` Editar Grupo ${grupo.nombre}`,
+        grupo,
+        categorias
+    })
+}
+
+//guarda los cambios en la BD
+exports.editarGrupo = async (req, res, next) => {
+    const grupo = await Grupos.findOne({where:{id: req.params.id, usuarioId: req.user.id }})
+   
+    if(!grupo){
+        req.flash('error','Operación no válida');
+        res.redirect('/administracion');
+        return next();
+    }
+    const { nombre, descripcion, categoriaId, url } = req.body;
+    // asignar los valores
+    grupo.nombre = nombre;
+    grupo.descripcion = descripcion;
+    grupo.categoriaId = categoriaId;
+    grupo.url = url;
+
+    //save db
+    await grupo.save();
+    req.flash('exito', 'Cambios Almacenados Correctamente');
+    res.redirect('/administracion');
+}
