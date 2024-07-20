@@ -7,6 +7,7 @@ const authController = require('../controllers/authController');
 const adminController = require('../controllers/adminController');
 const gruposController = require('../controllers/gruposController');
 
+
 module.exports = function(){
     /* Se define el nombre de la ruta localhost5000:inicio localhost:5000/crear-cuenta */
     router.get('/', homeController.home);
@@ -32,7 +33,9 @@ module.exports = function(){
         authController.usuarioAuntenticado,
         gruposController.formNuevoGrupo
     );
-    router.post('/nuevo-grupo', gruposController.crearGrupo)
+    router.post('/nuevo-grupo', 
+        gruposController.subirImagen,
+        gruposController.crearGrupo);
 
 
     return router

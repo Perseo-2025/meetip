@@ -23,4 +23,7 @@ npm i --save passport passport-local
 Dependencia par gerenerar id diferentes
 npm i --save uuid
 "---------------"
+Subida de imagenes
+npm i --save multer shortid
+"---------------"
 
