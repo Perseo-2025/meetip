@@ -12,8 +12,10 @@ const router = require('./routes');
 
 /* Conectando a la bd */
 const db = require('./config/db');
-require('./models/Usuarios');
-db.sync().then(() => console.log('DB conectado correctamente')).catch((error) => { console.log("HAY UN ERROR :",error)})
+    require('./models/Usuarios');
+    require('./models/Categorias');
+    require('./models/Grupos');
+    db.sync().then(() => console.log('DB conectado correctamente')).catch((error) => { console.log("HAY UN ERROR :",error)})
 
 /* Variables de desarrollo */
 require('dotenv').config({path: 'variables.env'});

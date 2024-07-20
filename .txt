@@ -20,4 +20,7 @@ npm i --save nodemailer
 Para obtener todos los usuarios en la base de datos
 npm i --save passport passport-local
 "---------------"
+Dependencia par gerenerar id diferentes
+npm i --save uuid
+"---------------"
 

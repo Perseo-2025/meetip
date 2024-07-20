@@ -9,12 +9,14 @@
   "author": "Rey Perseo Cardenas Sanchez",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^3.1.4"
+    "nodemon": "^3.1.4",
+    "uuid": "^10.0.0"
   },
   "dependencies": {
     "bcrypt-nodejs": "^0.0.3",
     "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.6",
+    "D": "^1.0.0",
     "dotenv": "^16.4.5",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
