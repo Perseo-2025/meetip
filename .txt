@@ -1,3 +1,6 @@
+Pendientes
+corregir la creacion de nuevo grupo  Syntaxis Error : PRIMARY must be unique
+Leaflet
 Dependencias usadas 
 - npm i --save-dev nodemon 
 - npm install --save express dotenv 
@@ -26,4 +29,11 @@ npm i --save uuid
 Subida de imagenes
 npm i --save multer shortid
 "---------------"
+Agregando Bundle configurando webpack
+ npm install -D babel-loader @babel/core @babel/preset-env webpack webpack-cli
+ npm i --save concurrently
+ "--------------"
+Para el mapa
+Leaflet Doc
+npm i --save leaflet-geosearch@2.7.0
 

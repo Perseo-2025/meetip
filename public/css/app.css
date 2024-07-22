@@ -214,7 +214,11 @@ nav.nav a:first-child {
     max-width:800px;
     color: white;
 }
-
+/* Mapa */
+#map {
+height: 400px;
+width: 100%;
+}
 /** Buscador Inicio **/
 .buscador-inicio {
     padding:3rem 0;
